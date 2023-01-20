@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+
+  <link
+  href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Montserrat Regular&amp;family=Merriweather&amp;display=swap"
+  rel="stylesheet">
+  <style>
+      /* Write all necessery css here  */
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="./registration.html">registration</a>
+    <a href="./signin.html">Login</a>
+  </div>
+  <div id="signup">
+    <h1>Please Enter Your Details</h1>
+    <form>
+      <input type="text" id="name" placeholder="Enter your name">
+      <input type="email" id="email" placeholder="Enter your email">
+      <input type="password"  id="password" placeholder="Creater password">
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+<script>
+  let formEl = document.querySelector("form");
+  let nameInpu = document.getElementById("name")
+  let emailInpu = document.getElementById("email")
+  let passInpu = document.getElementById("password");
+
+  let LSData = JSON.parse(localStorage.getItem("account-data"));
+  if (LSData == null){
+    LSData=[];
+  }
+  console.log(LSData);
+
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let formData ={
+      name : nameInpu.value,
+      email : emailInpu.value,
+      password : passInpu.value,
+    };
+    LSData.push(formData);
+    localStorage.setItem("account-data",JSON.stringify(LSData));
+
+  })
+
+
+</script>
+
+</html>

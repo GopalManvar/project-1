@@ -1,62 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Online at Best Prices | The Decor Company</title>
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Montserrat Regular&amp;family=Merriweather&amp;display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
-<body>
-    <nav id="nav">
-        <img style="height: 150px; width: 400px;" src="logo.svg" alt="loading">
-        <input type="text" name="search" id="search" placeholder="You Are Searching for">
-        <a href="#">Location</a>
-        <a href="#">Sign in/ Register</a>
-        <a href="#">Wishlist</a>
-        <a href="#">Cart</a>
-    </nav>
+<style>
+    
+    header{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 88%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding: 40px 100px;
+        z-index: 100000;
+       
+    }
+    header.sticky{
+        padding: 5px 100px;
+        background: #fff;
+    }
+    header .logo{
+        position: relative;
+        height: 150px; 
+        width: 400px;
+        transition: 0.6s;
+        
+    }
+    header ul{
+        position: relative;
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+    }
+    header ul li{
+        position: relative;
+        list-style: none;
+    }
+    header ul li a{
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: rgb(6, 0, 0);
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: 0.6s;
 
-    <div>
+
+    }
+    .banner{
+        position: relative;
+        width: 100%;
+         height: 8vh; 
+        /* background: url("img/navImg.png"); */
+        background-size: cover;
+       
+
+    }
+    header.sticky ul li a {
+        color:#000
+
+    }
+
+
+    .categories {
+        display: flex;
+
+    }
+
+    .categories img {
+        width: 20%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+#search{
+    border: none;
+    background-color: beige;
+                
+                top: 355px;
+                left: 575px;
+                height: 50px;
+                width: 500px;
+}
+#search input{
+    height: 50px;
+
+
+}
+
+    .base {
+
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header>
+        <a href="./index.html" class="logo"><img style="height: 120px; width: 400px;" src="logo.svg" alt=""></a>
+        <input type="text" name="search" id="search" placeholder="You are searching for">
+            <li><a href="#">Location<img src="/img/location.svg"  alt="" style="height: 5%; width: 5%;"></a></li>
+        <ul>
+            
+            <li><a href="registration.html">Sign In / Register <img src="/img/login.svg" alt="" style="height: 8%;width: 8%;"></a></li>
+            <li><a href="wishlist.html">Wishlist <img src="/img/wishlist.svg" alt="" style="height: 8%; width: 8%;" ></a></li>
+            <li><a href="cart.html">Cart <img src="/img/cart.svg" alt="" style="height: 8%; width: 8%;" ></a></li>
+            
+        </ul>
+    </header>
+    <section class="banner"></section>
+    <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY>0)
+
+        })
+    </script>
+
+
+    <div style="margin: 35px 0px 15px; text-align: center;">
+        <h1 style="color: black; font: size 22px; padding: 0px 15px;">-----------------Shop By
+            Categories------------------</h1>
+    </div>
+
+
+    <div class="categories">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671109983_Mi5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671109989_My5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671109994_NC5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671109999_NS5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671110006_Ni5wbmc=.png" alt="">
     </div>
-    <div>
-        <img src="https://cdn.plotch.io/image/upload/C/V/1671110178_SG9tZWRlY29yLnBuZw==.png" alt="">
-        <img src="https://cdn.plotch.io/image/upload/C/V/1671110155_NC5wbmc=.png" alt="">
-        <img src="https://cdn.plotch.io/image/upload/C/V/1671110161_Mi5wbmc=.png" alt="">
+    <div class="container">
+
+
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img
+                        src="https://cdn.plotch.io/image/upload/C/V/1671110178_SG9tZWRlY29yLnBuZw==.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://cdn.plotch.io/image/upload/C/V/1671110155_NC5wbmc=.png"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="https://cdn.plotch.io/image/upload/C/V/1671110161_Mi5wbmc=.png"
+                        alt=""></div>
+                        <div class="swiper-pagination" style="margin-top: 50%;"></div>...
+            </div>
+
+
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
     </div>
-    <div>
+   
+        
+
+        <div class="row div-row mg-b-10 rows-border "
+        style="background-color:#000000;color:#000000;font-size:12px; display: flex;">
+     
+       
+        <div class="div-col-container div-col div-colm col-md-2 col-xs-12" style="width:20%">
+            <div class="row" style="height:50px;"></div>
+            <div class="widgets-section">
+                <div class="widgets-box">
+                    <a href="" style="cursor: default;pointer-events: none;">
+                        <img class="img-responsive img-page-responsive display-desktop-image"
+                            src="https://cdn.plotch.io/image/upload/C/V/1660916598_MS5wbmc=.png"
+                            alt="" style="cursor: default;pointer-events: none;" title="">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-container div-col div-colm col-md-2 col-xs-12" style="width:20%">
+            <div class="row" style="height:50px;"></div>
+            <div class="widgets-section">
+                <div class="widgets-box">
+                    <a href="" style="cursor: default;pointer-events: none;">
+                        <img class="img-responsive img-page-responsive display-desktop-image"
+                            src="https://cdn.plotch.io/image/upload/C/V/1660916607_Mi5wbmc=.png"
+                            alt="" style="cursor: default;pointer-events: none;" title="">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-container div-col div-colm col-md-2 col-xs-12" style="width:20%">
+            <div class="row" style="height:50px;"></div>
+            <div class="widgets-section">
+                <div class="widgets-box">
+                    <a href="" style="cursor: default;pointer-events: none;">
+                        <img class="img-responsive img-page-responsive display-desktop-image"
+                            src="https://cdn.plotch.io/image/upload/C/V/1660916612_My5wbmc=.png"
+                            alt="" style="cursor: default;pointer-events: none;" title="">
+                       
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-container div-col div-colm col-md-2 col-xs-12" style="width:20%">
+            <div class="row" style="height:50px;"></div>
+            <div class="widgets-section">
+                <div class="widgets-box">
+                    <a href="" style="cursor: default;pointer-events: none;">
+                        <img class="img-responsive img-page-responsive display-desktop-image"
+                            src="https://cdn.plotch.io/image/upload/C/V/1660916617_NC5wbmc=.png"
+                            alt="" style="cursor: default;pointer-events: none;" title="">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-container div-col div-colm col-md-2 col-xs-12" style="width:20%">
+            <div class="row" style="height:50px;"></div>
+            <div class="widgets-section">
+                <div class="widgets-box">
+                    <a href="" style="cursor: default;pointer-events: none;">
+                        <img class="img-responsive img-page-responsive display-desktop-image"
+                            src="https://cdn.plotch.io/image/upload/C/V/1660916629_NS5wbmc=.png"
+                            alt="" style="cursor: default;pointer-events: none;" title="">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> 
+  
+    <div class="base" >
+        <div>
         <img src="https://cdn.plotch.io/image/upload/C/V/1671110234_SG9tZWRlY29yLnBuZw==.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671110241_NS5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671110248_Ni5wbmc=.png" alt="">
         <img src="https://cdn.plotch.io/image/upload/C/V/1671110264_My5wbmc=.png" alt="">
-        
-    </div>
-    <footer>
-        <h4 class="footer-heading">About Us</h4>
-                        <p>India's most convenient online grocery channel Buyerapp Fresh and Smart makes your grocery
-                            shopping even simpler. No more hassles of sweating it out in crowded markets, grocery shops
-                            &amp; supermarkets - now shop from the comfort of your home; office, or on the move. We
-                            offer you the convenience of shopping for everything that you need for your home - be it
-                            fresh fruits &amp; vegetables, rice, dals, oil, packaged food, dairy item, frozen, pet food,
-                            household cleaning items &amp; personal care products from a single virtual store.</p>
-                            <h4 class="footer-heading">PAYMENT OPTIONS</h4>
-                            <div class="footer-cc-list">
-                                <span class="icon icon-amex" title="American Express"></span>
-                                <span class="icon icon-maestro" title="Maestro"></span>
-                                <span class="icon icon-mastercard" title="Mastercard"></span>
-                                <i class="fa fa-cc-paypal fa-lg" aria-hidden="true" title="PayPal"></i>
-                                <span class="icon icon-visacard" title="Visa Card"></span>
-                            </div>
-    </footer>
+        </div>
 
-    
+    </div>
+    <div class="footer-container ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+
+                    <h4 class="footer-heading">About Us</h4>
+                    <p>India's most convenient online grocery channel Buyerapp Fresh and Smart makes your grocery
+                        shopping even simpler. No more hassles of sweating it out in crowded markets, grocery shops
+                        &amp; supermarkets - now shop from the comfort of your home; office, or on the move. We
+                        offer you the convenience of shopping for everything that you need for your home - be it
+                        fresh fruits &amp; vegetables, rice, dals, oil, packaged food, dairy item, frozen, pet food,
+                        household cleaning items &amp; personal care products from a single virtual store.</p>
+
+                    <h4 class="footer-heading">PAYMENT OPTIONS</h4>
+                    <div class="footer-cc-list">
+                        <span class="icon icon-amex" title="American Express"></span>
+                        <span class="icon icon-maestro" title="Maestro"></span>
+                        <span class="icon icon-mastercard" title="Mastercard"></span>
+                        <i class="fa fa-cc-paypal fa-lg" aria-hidden="true" title="PayPal"></i>
+                        <span class="icon icon-visacard" title="Visa Card"></span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footer-heading">OUR COMPANY</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" target="_self" class="plotch_a_link">About Us</a></li>
+                        <li><a href="#" target="_self" class="plotch_a_link">Contact Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footer-heading">TOP CATEGORIES</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" target="_self" class="plotch_a_link">Grocery</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footer-heading">POLICIES &amp; INFO</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" target="_self" class="plotch_a_link">Privacy Policy</a></li>
+                        <li><a href="#" target="_self" class="plotch_a_link">Terms &amp; Condition</a></li>
+                        <li><a href="#" target="_self" class="plotch_a_link">Shipping Policy</a></li>
+                        <li><a href="#" target="_self" class="plotch_a_link">Return &amp; Refund</a></li>
+                    </ul>
+
+
+                    <h4 class="footer-heading">SUPPORT</h4>
+                    <p>For Help, send an email to customercare@craftsvilla.com</p>
+
+                    <div class="sticky-social" style="margin-bottom: 30px">
+                        <ul class="social">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+
+   
+
+   
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });
+    </script>
 </body>
+
+
 </html>

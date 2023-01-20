@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+</head>
+<style>
+    .container {
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+    .card img {
+      width: 100%;
+    }
+  </style>
+<body>
+    <div class="container"></div>
+</body>
+
+<script>
+
+const API = "https://63c8f0ff320a0c4c953d6f9d.mockapi.io/products";
+
+let containerEl = document.querySelector(".container");
+let filterForm = document.querySelector("form");
+let fromInput = document.getElementById("from");
+let fetchedData = [];
+fetch(API)
+  .then((request) => {
+    // Stream
+    return request.json();
+  })
+  .then((data) => {
+    fetchedData = data;
+    DisplayProducts(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+  DisplayProducts(data);
+
+function DisplayProducts(data) {
+  containerEl.innerHTML = "";
+  data.forEach((element) => {
+    let productCard = document.createElement("div");
+    productCard.setAttribute("class", "card");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", element.image);
+
+    
+
+    let  name = document.createElement("h3");
+    name.innerText = element.name;
+
+    let price = document.createElement("h4");
+    price.textContent = element.price;
+
+    productCard.append(img,  name, price);
+    containerEl.append(productCard);
+  });
+}
+</script>
+</html>
